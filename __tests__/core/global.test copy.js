@@ -27,7 +27,6 @@ function makeGlobalDatabase() {
 
 test('Find the case', () => {
   globalDatabase.find.mockImplementation((collection, query, callback) => {
-    console.log('collection ---', collection);
     const data = [{name: 'jack'}, {name: 'bar'}];
     callback(data);
   });

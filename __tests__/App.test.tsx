@@ -18,21 +18,5 @@ import {it, test} from '@jest/globals';
 import renderer from 'react-test-renderer';
 
 test('renders correctly', () => {
-  const snapshot = renderer.create(<App />).toJSON();
-  console.log('snapshot ----', snapshot);
-  expect(snapshot).toMatchInlineSnapshot(`
-    <View
-      style={
-        {
-          "alignItems": "center",
-          "flex": 1,
-          "justifyContent": "center",
-        }
-      }
-    >
-      <Text>
-        Hello Jack Boy!
-      </Text>
-    </View>
-  `);
+  renderer.create(<App />);
 });

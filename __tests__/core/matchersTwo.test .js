@@ -209,15 +209,15 @@ test('compiling android goes as expected', () => {
 
 // Mock Function Implementation
 
+/**
+ * In Jest, mockImplementation is a method that you can use to define a custom implementation for a mocked function. This method allows you to replace the default behavior of a mocked function with your own logic for testing purposes.
+ */
+
 const getUserDetails = jest.fn();
 
 getUserDetails.mockImplementation((collection, query, callback) => {
-  const userDetails = {
-    name: 'Jack ryan',
-    age: 29,
-  };
-
-  callback(userDetails);
+  return 'User are not available!';
 });
 
-const result = getUserDetails();
+const results = getUserDetails();
+console.log('results ---', results);
